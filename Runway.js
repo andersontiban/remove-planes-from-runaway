@@ -27,5 +27,6 @@ class Runway {
         }
     }
 }
-
+Runway.planes.length = 100;
+console.log(Runway.planes.length)
 module.exports = Runway;
