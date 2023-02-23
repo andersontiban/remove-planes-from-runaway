@@ -15,4 +15,17 @@ class Runway {
         }
         Runway.planes.push(plane)
     }
+
+    remove(planeName){
+        if(Runway.planes.length == 0){
+            throw new Error("Runway has no planes to remove");
+        }
+        for(let x in Runway.planes){
+            if(Runway.planes[x] == planeName){
+                Runway.planes.splice(x,1);
+            }
+        }
+    }
 }
+
+module.exports = Runway;
